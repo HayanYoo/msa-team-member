@@ -11,7 +11,7 @@ import java.io.IOException;
 
 @Service
 public class Consumer {
-    private final Logger logger = (Logger) LoggerFactory.getLogger(Producer.class);
+    private final Logger logger = LoggerFactory.getLogger(Producer.class);
 
     @KafkaListener(topics = "kafka_practice", groupId = "group_id_kafka")
     public void consume(String message) throws IOException {
